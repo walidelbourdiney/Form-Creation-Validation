@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password").value.trim();
 
     // Get the feedback div
-    const formFeedback = document.getElementById("form-feedback");
+    const feedbackDiv = document.getElementById("form-feedback");
     let isValid = true;
     let messages = [];
 
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
-    formFeedback.style.display = "block";
+    feedbackDiv.style.display = "block";
 
     if (isValid) {
-      formFeedback.textContent = "Registration successful!";
+      feedbackDiv.textContent = "Registration successful!";
     } else {
-      formFeedback.innerHTML = messages.join("<br>");
-      formFeedback.style.color = "#dc3545";
+      feedbackDiv.innerHTML = messages.join("<br>");
+      feedbackDiv.style.color = "#dc3545";
     }
   });
 });
